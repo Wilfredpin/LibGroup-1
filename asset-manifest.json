@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/LibGroup-1/static/css/main.b1e26589.css",
+    "main.js": "/LibGroup-1/static/js/main.32b8a950.js",
+    "static/media/Pexels Photo by Pixabay.png": "/LibGroup-1/static/media/Pexels Photo by Pixabay.b8e910b4c4d0edc250e8.png",
+    "static/media/Pexels Photo by Parth Shah.png": "/LibGroup-1/static/media/Pexels Photo by Parth Shah.20da61cf7e603c343348.png",
+    "static/media/unsplash_oB2aEeE8s4A.png": "/LibGroup-1/static/media/unsplash_oB2aEeE8s4A.3ffce027b1631dd48fe8.png",
+    "static/media/Rectangle 71.png": "/LibGroup-1/static/media/Rectangle 71.f1d2be9054b57de9b734.png",
+    "static/media/Group 4.png": "/LibGroup-1/static/media/Group 4.71fa96aa6794196d2e32.png",
+    "static/media/Rectangle 72.png": "/LibGroup-1/static/media/Rectangle 72.f1aa773bc9c2c84302ef.png",
+    "static/media/Rectangle 69.png": "/LibGroup-1/static/media/Rectangle 69.0ae7034f8db57093d9e9.png",
+    "static/media/Jessis.png": "/LibGroup-1/static/media/Jessis.c190c8c1e328e42e3299.png",
+    "static/media/Rectangle 68.png": "/LibGroup-1/static/media/Rectangle 68.4743d07955e3b9bff2d9.png",
+    "static/media/Rectangle 67.png": "/LibGroup-1/static/media/Rectangle 67.57d0829005a8934a5919.png",
+    "static/media/Rectangle 70.png": "/LibGroup-1/static/media/Rectangle 70.acac1f737e2c95ee57df.png",
+    "static/media/Law.png": "/LibGroup-1/static/media/Law.76b2eb7f699a52907c7d.png",
+    "static/media/Frame 56.png": "/LibGroup-1/static/media/Frame 56.f3831718fa378730a858.png",
+    "static/media/Frame 54.png": "/LibGroup-1/static/media/Frame 54.517095d811aa1f5cf2c7.png",
+    "static/media/Frame 50.png": "/LibGroup-1/static/media/Frame 50.f628b4fb05e78f161815.png",
+    "index.html": "/LibGroup-1/index.html",
+    "main.b1e26589.css.map": "/LibGroup-1/static/css/main.b1e26589.css.map",
+    "main.32b8a950.js.map": "/LibGroup-1/static/js/main.32b8a950.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b1e26589.css",
+    "static/js/main.32b8a950.js"
+  ]
+}
