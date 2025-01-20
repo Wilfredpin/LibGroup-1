@@ -5,7 +5,7 @@ import ActiveExample from "./Hero Section/Button";
 import ShapeExample from "./Hero Section/Image";
 import BookCard from "./Recent/Recent";
 import MyComponent from "./Comment/Comment";
-
+import Footer from "./Footer/Footer";
 function App() {
   return (
     <div className="App">
@@ -39,7 +39,7 @@ function App() {
         <ActiveExample />
       </div>
 
-      <div className="footer"></div>
+      <Footer />
     </div>
   );
 }
