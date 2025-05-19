@@ -203,31 +203,3 @@ a.nav-link:hover {
   top: 20%;
   left: 40%;
 }
-
-.footer {
-  margin: 0 auto;
-  width: 85%;
-  margin-top: 40px;
-}
-
-.footer-cont {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-cont p {
-  color: #555;
-}
-
-.footer-cont .black {
-  color: black;
-}
-
-.centered-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  flex-direction: column;
-}
