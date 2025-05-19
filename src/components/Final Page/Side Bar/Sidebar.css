@@ -1,0 +1,78 @@
+.sidebar {
+  position: fixed; /* Fix the sidebar in place */
+  top: 0; /* Align it to the top of the viewport */
+  left: 0; /* Align it to the left of the viewport */
+  width: 250px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-section {
+  background: linear-gradient(to bottom, #f3f3f3, #ffffff);
+  padding: 24px;
+  border-bottom-right-radius: 30px;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.welcome-text {
+  color: #555;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+.nav-links {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #444;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.nav-item img {
+  width: 20px;
+  height: 20px;
+}
+
+.nav-item .icon {
+  background-color: #cfffdb;
+  color: #6fe98e;
+  font-weight: bold;
+  border-radius: 50%;
+  font-size: 14px;
+  text-align: center;
+}
+
+.nav-item.active {
+  color: #6fe98e;
+  font-weight: bold;
+}
+
+.nav-item.logout {
+  margin-top: auto;
+  color: #e74c3c;
+}

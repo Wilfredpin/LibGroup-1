@@ -1,0 +1,18 @@
+.grid-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* Sidebar | Content */
+}
+
+.sidebar-area {
+  background-color: #f3f3f3;
+}
+
+.content-area {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.content-area > * {
+  flex-shrink: 0;
+}

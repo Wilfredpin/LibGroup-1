@@ -1,0 +1,58 @@
+.recommended {
+  padding: 20px;
+}
+
+.rec-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.rec-header h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.rec-header .see-all {
+  font-size: 14px;
+  text-decoration: none;
+  color: #007aff;
+}
+
+.rec-cards {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.rec-card {
+  flex: 0 0 auto;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rec-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.rec-card h3 {
+  font-size: 14px;
+  margin: 8px 0 4px;
+  line-height: 1.2;
+}
+
+.rec-card p {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+.see-all {
+  border: none;
+  border-radius: 10px;
+}

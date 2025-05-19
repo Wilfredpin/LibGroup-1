@@ -6,15 +6,20 @@ import "../styles.css";
 function ColorSchemesExample() {
   return (
     <>
-      <Navbar bg="light" data-bs-theme="light">
+      <Navbar>
         <Container>
-          <Navbar.Brand href="#home">Group 1</Navbar.Brand>
+          <Navbar.Brand href="#home">Kortext</Navbar.Brand>
           <Nav className="ml-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Categories</Nav.Link>
-            <Nav.Link href="#pricing">E-learning</Nav.Link>
-            <Nav.Link href="#pricing">Other</Nav.Link>
+            <Nav.Link href="#features">Browse</Nav.Link>
+            <Nav.Link href="#pricing">Popular</Nav.Link>
+            <Nav.Link href="#pricing">Membership</Nav.Link>
           </Nav>
+
+          <div className="nav-buttons">
+            <button>Login</button>
+            <button>Sign Up</button>
+          </div>
         </Container>
       </Navbar>
     </>
