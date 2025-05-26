@@ -1,16 +1,24 @@
-import { useNavigate } from "react-router-dom";
-import "./Target.css";
-import React, { useState } from "react";
-import fineass from "./Group 1.png";
+import { useNavigate } from 'react-router-dom';
+import './Target.css';
+import React, { useState, useEffect } from 'react';
+import fineass from './Group 1.png';
 
 function BasicExample() {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) navigate('/dashboard');
+  }, [navigate]);
+
+  // Toggle between signup and login mode
+  const [isSignUp, setIsSignUp] = useState(true);
+
   // State to store user input
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: "",
+    name: '',
+    email: '',
+    password: '',
   });
 
   // Handle input changes
@@ -19,38 +27,41 @@ function BasicExample() {
     setFormData({ ...formData, [name]: value });
   };
 
-  // Handle sign-up click
-  const handleSignUpClick = async () => {
+  // Reusable function for registration and login
+  const handleSubmit = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/register", {
-        method: "POST",
+      const endpoint = isSignUp ? 'register' : 'login';
+      const payload = isSignUp
+        ? formData
+        : { email: formData.email, password: formData.password };
+
+      const response = await fetch(`http://localhost:5000/api/${endpoint}`, {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       const data = await response.json();
-      console.log("Response Data:", data); // Debug the response
+      console.log('Response Data:', data);
 
       if (response.ok) {
-        console.log(data.message);
-        alert(data.message); // Show success message
-        navigate("/next"); // Navigate to the next page
+        alert(data.message);
+
+        if (data.token) {
+          localStorage.setItem('token', data.token);
+        }
+
+        navigate('/dashboard');
       } else {
-        console.error(data.message);
-        alert(data.message); // Show error message
+        alert(data.message || 'An error occurred.');
       }
     } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred. Please try again.");
+      console.error('Error:', error);
+      alert('A server error occurred.');
     }
   };
-
-  // if (!formData.name || !formData.email || !formData.password) {
-  //   alert("All fields are required");
-  //   return;
-  // }
 
   return (
     <div className="body">
@@ -59,23 +70,34 @@ function BasicExample() {
           <div className="header">
             <div className="text">
               <h4>Kortext</h4>
-              <h2>Get Started</h2>
+              <h2>{isSignUp ? 'Get Started' : 'Welcome Back'}</h2>
               <p>
-                Already have an account? <span>Sign in</span>
+                {isSignUp
+                  ? 'Already have an account?'
+                  : "Don't have an account?"}{' '}
+                <span
+                  style={{ cursor: 'pointer', color: 'blue' }}
+                  onClick={() => setIsSignUp(!isSignUp)}
+                >
+                  {isSignUp ? 'Sign in' : 'Sign up'}
+                </span>
               </p>
             </div>
             <div className="underline"></div>
           </div>
+
           <div className="inputs">
-            <div className="input">
-              <h6>Name</h6>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-              />
-            </div>
+            {isSignUp && (
+              <div className="input">
+                <h6>Name</h6>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                />
+              </div>
+            )}
             <div className="input">
               <h6>Email</h6>
               <input
@@ -95,19 +117,22 @@ function BasicExample() {
               />
             </div>
           </div>
+
           <div className="submit-container">
             <div
               className="submit"
-              onClick={handleSignUpClick}
-              style={{ cursor: "pointer" }}
+              onClick={handleSubmit}
+              style={{ cursor: 'pointer' }}
             >
-              Sign Up
+              {isSignUp ? 'Sign Up' : 'Sign In'}
             </div>
           </div>
 
-          <div className="forgot-password">
-            Forgot Password? <span>Click Here!</span>
-          </div>
+          {!isSignUp && (
+            <div className="forgot-password">
+              Forgot Password? <span>Click Here!</span>
+            </div>
+          )}
         </div>
 
         <div className="image">

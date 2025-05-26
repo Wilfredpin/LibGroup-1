@@ -1,9 +1,19 @@
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import "../styles.css";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import '../styles.css';
+
+import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
 
 function ColorSchemesExample() {
+  const navigate = useNavigate();
+
+  const handleClick = (path) => {
+    console.log(`Navigating to ${path}`);
+    navigate(path);
+  };
+
   return (
     <>
       <Navbar>
@@ -17,8 +27,24 @@ function ColorSchemesExample() {
           </Nav>
 
           <div className="nav-buttons">
-            <button>Login</button>
-            <button>Sign Up</button>
+            <Button
+              variant="primary"
+              size="lg"
+              active
+              onClick={() => handleClick('/target')}
+            >
+              Login
+            </Button>
+            <Button
+              variant="secondary"
+              size="lg"
+              active
+              onClick={() => handleClick('/target')}
+            >
+              Sign Up
+            </Button>
+            {/* <button>Login</button>
+            <button>Sign Up</button> */}
           </div>
         </Container>
       </Navbar>

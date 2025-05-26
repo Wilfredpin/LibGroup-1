@@ -1,6 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import { UserProvider } from './UserContext';
 
 function Main() {
   return (
@@ -12,8 +13,10 @@ function Main() {
 
 ReactDOM.render(
   <React.StrictMode>
-    <Main />
-    <App />
+    <UserProvider>
+      <Main />
+      <App />
+    </UserProvider>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 );

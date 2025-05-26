@@ -29,7 +29,7 @@ const books = [
   },
 ];
 
-const Recommended = () => {
+const Recommended = ({user}) => {
   const [showPopular] = useState(false);
 
   return (

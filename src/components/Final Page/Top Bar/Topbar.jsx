@@ -1,8 +1,7 @@
-import React from "react";
-import "./Topbar.css";
-import profile from "./pexels-lap-dinh-quoc-728742807-18821587.jpg";
+import React from 'react';
+import './Topbar.css';
 
-const Topbar = () => {
+const Topbar = ({ user }) => {
   return (
     <div className="topbar">
       <div className="search-box">
@@ -15,8 +14,16 @@ const Topbar = () => {
           alt="Notification"
           className="icon"
         />
-        <span className="username">Sarah Bell</span>
-        <img src={profile} alt="User" className="avatar" />
+        <span className="username">{user?.name}</span>
+        <img
+          src={
+            user?.profile_picture
+              ? `http://localhost:5000${user.profile_picture}`
+              : 'default.png'
+          }
+          alt="User"
+          className="avatar"
+        />
       </div>
     </div>
   );
