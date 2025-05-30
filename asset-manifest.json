@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/LibGroup-1/static/css/main.ed1bb452.css",
-    "main.js": "/LibGroup-1/static/js/main.27186343.js",
+    "main.css": "/LibGroup-1/static/css/main.c9f5ef37.css",
+    "main.js": "/LibGroup-1/static/js/main.92a07e3f.js",
     "static/media/Pexels Photo by Parth Shah.png": "/LibGroup-1/static/media/Pexels Photo by Parth Shah.20da61cf7e603c343348.png",
     "static/media/unsplash_oB2aEeE8s4A.png": "/LibGroup-1/static/media/unsplash_oB2aEeE8s4A.3ffce027b1631dd48fe8.png",
     "static/media/Rectangle 71.png": "/LibGroup-1/static/media/Rectangle 71.f1d2be9054b57de9b734.png",
@@ -11,35 +11,26 @@
     "static/media/Rectangle 69.png": "/LibGroup-1/static/media/Rectangle 69.0ae7034f8db57093d9e9.png",
     "static/media/Jessis.png": "/LibGroup-1/static/media/Jessis.c190c8c1e328e42e3299.png",
     "static/media/Rectangle 68.png": "/LibGroup-1/static/media/Rectangle 68.4743d07955e3b9bff2d9.png",
-    "static/media/million.jpg": "/LibGroup-1/static/media/million.62725f6961b6715fd4fc.jpg",
     "static/media/pexels-rafael-cosquiere-1059286-2041540.jpg": "/LibGroup-1/static/media/pexels-rafael-cosquiere-1059286-2041540.17202c5ff02b4a8c65c9.jpg",
     "static/media/Rectangle 67.png": "/LibGroup-1/static/media/Rectangle 67.57d0829005a8934a5919.png",
     "static/media/Rectangle 70.png": "/LibGroup-1/static/media/Rectangle 70.acac1f737e2c95ee57df.png",
     "static/media/The-Psychology-of-Money-by-Morgan-housel-997x1536.jpeg": "/LibGroup-1/static/media/The-Psychology-of-Money-by-Morgan-housel-997x1536.2e4ee594713d1c2e02db.jpeg",
-    "static/media/blue.jpg": "/LibGroup-1/static/media/blue.64d799c83883330a5fa6.jpg",
-    "static/media/pottter.jpg": "/LibGroup-1/static/media/pottter.8fb66a05ca9463517bf1.jpg",
     "static/media/Law.png": "/LibGroup-1/static/media/Law.76b2eb7f699a52907c7d.png",
-    "static/media/Harry.jpg": "/LibGroup-1/static/media/Harry.c676f8caafaa13ef2b87.jpg",
     "static/media/Frame 56.png": "/LibGroup-1/static/media/Frame 56.f3831718fa378730a858.png",
     "static/media/Frame 54.png": "/LibGroup-1/static/media/Frame 54.517095d811aa1f5cf2c7.png",
     "static/media/Frame 50.png": "/LibGroup-1/static/media/Frame 50.f628b4fb05e78f161815.png",
-    "static/media/Wuthering.jpg": "/LibGroup-1/static/media/Wuthering.731f9148878a0f95efdf.jpg",
-    "static/media/Dutch.jpg": "/LibGroup-1/static/media/Dutch.830a12f2853017152215.jpg",
     "static/media/erasebg-transformed(1).png": "/LibGroup-1/static/media/erasebg-transformed(1).262a2edebe4a925c34ee.png",
-    "static/media/pexels-lap-dinh-quoc-728742807-18821587.jpg": "/LibGroup-1/static/media/pexels-lap-dinh-quoc-728742807-18821587.0b69cc7be29711a5405e.jpg",
     "static/media/pexels-nardo-1870916-3574678(1).jpg": "/LibGroup-1/static/media/pexels-nardo-1870916-3574678(1).3d8b2021897348d21e0a.jpg",
     "static/media/Group 1.png": "/LibGroup-1/static/media/Group 1.df9f3429981f7d2bb3c4.png",
     "static/media/pexels-rquiros-2330137.jpg": "/LibGroup-1/static/media/pexels-rquiros-2330137.90fe12c8ab44c6a7a2d2.jpg",
-    "static/media/The_Hunger_Games.jpg": "/LibGroup-1/static/media/The_Hunger_Games.c0f38832926ece633879.jpg",
     "static/media/How innovation works.jpg": "/LibGroup-1/static/media/How innovation works.715b3017fc065255c092.jpg",
     "static/media/company-of-one.jpg": "/LibGroup-1/static/media/company-of-one.affac74fad3c2e69bad9.jpg",
-    "static/media/crow.jpg": "/LibGroup-1/static/media/crow.3b367cb063b38e91cc7c.jpg",
     "index.html": "/LibGroup-1/index.html",
-    "main.ed1bb452.css.map": "/LibGroup-1/static/css/main.ed1bb452.css.map",
-    "main.27186343.js.map": "/LibGroup-1/static/js/main.27186343.js.map"
+    "main.c9f5ef37.css.map": "/LibGroup-1/static/css/main.c9f5ef37.css.map",
+    "main.92a07e3f.js.map": "/LibGroup-1/static/js/main.92a07e3f.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed1bb452.css",
-    "static/js/main.27186343.js"
+    "static/css/main.c9f5ef37.css",
+    "static/js/main.92a07e3f.js"
   ]
 }
