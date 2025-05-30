@@ -4,34 +4,24 @@
 }
 
 .header {
-  display: flex;
+  display: flex; 
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
   margin-top: 20px;
 }
 
-.books-grid {
-  display: grid;
-  grid-template-columns: 250px 2fr;
-  gap: 40px;
-}
-
-.book-card6.large {
-  background-color: white;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.book-card6.large img {
-  width: 228px;
+.back {
+  font-size: 14px;
+  text-decoration: none;
+  color: #e74c3c;
+  border: none;
   border-radius: 10px;
 }
 
-.right-books {
+.books {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
 

@@ -2,11 +2,13 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const db = require('./db'); // Import MySQL connection
-const bcrypt = require('bcrypt'); // To hash passwords
-const jwt = require('jsonwebtoken'); // For JSON Web Token
-const multer = require('multer'); // For image uploads
-// const path = require('path');
+
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const multer = require('multer');
+
+const db = require('./db');
+const bookRoutes = require('./routes/books');
 
 const app = express();
 const PORT = 5000;
@@ -15,19 +17,18 @@ const PORT = 5000;
 app.use(cors());
 app.use(bodyParser.json());
 app.use('/uploads', express.static('uploads'));
-
+app.use('/api/books', bookRoutes);
 
 // Storage config
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, 'uploads/'); // folder where images are saved
+    cb(null, 'uploads/pfps/'); // folder where images are saved
   },
   filename: (req, file, cb) => {
     const uniqueName = Date.now() + '-' + file.originalname;
     cb(null, uniqueName);
   },
 });
-
 const upload = multer({ storage });
 
 // JWT Middleware to protect routes
@@ -43,6 +44,12 @@ function verifyToken(req, res, next) {
     next();
   });
 }
+
+// Token validation route
+app.get('/api/validate-token', verifyToken, (req, res) => {
+  res.status(200).json({ valid: true, user: req.user });
+});
+
 
 // Registration route
 app.post('/api/register', (req, res) => {
@@ -137,7 +144,6 @@ app.get('/api/dashboard', verifyToken, (req, res) => {
         name: user.username,
         email: user.email,
         profile_picture: user.profile_picture_url,
-        // add other personalized content here like book progress, history, etc.
       }
     });
   });
@@ -146,7 +152,7 @@ app.get('/api/dashboard', verifyToken, (req, res) => {
 // Upload route
 app.post('/api/upload-profile', upload.single('profilePic'), (req, res) => {
   const userId = req.body.userId;
-  const imageUrl = `/uploads/${req.file.filename}`;
+  const imageUrl = `/uploads/pfps/${req.file.filename}`;
 
   const query = 'UPDATE users SET profile_picture_url = ? WHERE id = ?';
   db.query(query, [imageUrl, userId], (err, result) => {

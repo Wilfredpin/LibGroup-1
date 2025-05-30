@@ -1,18 +1,28 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './Target.css';
 import React, { useState, useEffect } from 'react';
 import fineass from './Group 1.png';
+import { getToken, setToken } from '../../utils/authUtils';
 
 function BasicExample() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
-    const token = localStorage.getItem('token');
+    const token = getToken();
+
     if (token) navigate('/dashboard');
   }, [navigate]);
 
-  // Toggle between signup and login mode
   const [isSignUp, setIsSignUp] = useState(true);
+  const [loading, setLoading] = useState(false);
+  // const [rememberMe, setRememberMe] = useState(true)
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const mode = params.get('mode');
+    if (mode === 'signin') setIsSignUp(false);
+  }, [location]);
 
   // State to store user input
   const [formData, setFormData] = useState({
@@ -27,8 +37,28 @@ function BasicExample() {
     setFormData({ ...formData, [name]: value });
   };
 
+  // Form validation function
+  const validateForm = () => {
+    if (isSignUp && !formData.name.trim()) {
+      alert('Name is required.');
+      return false;
+    }
+    if (!formData.email.trim() || !formData.password.trim()) {
+      alert('Email and password are required.');
+      return false;
+    }
+    return true;
+  };
+
   // Reusable function for registration and login
   const handleSubmit = async () => {
+    setLoading(true);
+
+    if (!validateForm()) {
+      setLoading(false);
+      return;
+    }
+
     try {
       const endpoint = isSignUp ? 'register' : 'login';
       const payload = isSignUp
@@ -49,18 +79,18 @@ function BasicExample() {
       if (response.ok) {
         alert(data.message);
 
-        if (data.token) {
-          localStorage.setItem('token', data.token);
-        }
+        if (data.token) setToken(data.token);
 
         navigate('/dashboard');
       } else {
+        setFormData({ ...formData, password: '' });
         alert(data.message || 'An error occurred.');
       }
     } catch (error) {
       console.error('Error:', error);
       alert('A server error occurred.');
     }
+    setLoading(false);
   };
 
   return (
@@ -124,7 +154,7 @@ function BasicExample() {
               onClick={handleSubmit}
               style={{ cursor: 'pointer' }}
             >
-              {isSignUp ? 'Sign Up' : 'Sign In'}
+              {loading ? 'Loading...' : isSignUp ? 'Sign Up' : 'Sign In'}
             </div>
           </div>
 

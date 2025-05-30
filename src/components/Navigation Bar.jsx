@@ -31,7 +31,7 @@ function ColorSchemesExample() {
               variant="primary"
               size="lg"
               active
-              onClick={() => handleClick('/target')}
+              onClick={() => handleClick('/target?mode=signin')}
             >
               Login
             </Button>
@@ -43,8 +43,6 @@ function ColorSchemesExample() {
             >
               Sign Up
             </Button>
-            {/* <button>Login</button>
-            <button>Sign Up</button> */}
           </div>
         </Container>
       </Navbar>

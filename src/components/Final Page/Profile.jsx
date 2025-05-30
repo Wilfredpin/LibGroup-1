@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useUser } from '../UserContext';
+import { getToken } from '../../utils/authUtils';
+import './Profile.css';
 
 const Profile = () => {
   const { userData, setUserData } = useUser();
@@ -59,14 +61,14 @@ const Profile = () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${localStorage.getItem('token')}`,
+        Authorization: `Bearer ${getToken()}`,
       },
       body: JSON.stringify({ id: userData.id, username, email }),
     });
 
     const data = await res.json();
     console.log(data);
-    
+
     if (res.ok) {
       alert('Profile updated!');
       // Update context with new username and email
@@ -77,27 +79,35 @@ const Profile = () => {
   return (
     <div className="profile-container">
       <h2>Your Profile</h2>
-      <div className="profile-pic">
-        <img src={preview} alt="Profile" width="150" height="150" />
-        <input type="file" onChange={handleFileChange} />
-        {selectedFile && <button onClick={handleUpload}>Upload</button>}
-      </div>
 
+      <div className="profile">
+        <img src={preview} alt="Profile" />
+        <div>
+          <input type="file" onChange={handleFileChange} />
+          {selectedFile && <button onClick={handleUpload}>Upload</button>}
+        </div>
+      </div>
+      <br />
+      <br />
       <div className="profile-details">
         <label>Username</label>
+        <br />
         <input
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-
+        <br />
+        <br />
         <label>Email</label>
+        <br />
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-
+        <br />
+        <br />
         <button onClick={handleSaveChanges}>Save Changes</button>
       </div>
     </div>

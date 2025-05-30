@@ -1,0 +1,101 @@
+[
+  {
+    "title": "Super Mario",
+    "author": "Jeff Ryan",
+    "description": "The story of Nintendo's iconic character.",
+    "cover_image": "/images/power.png",
+    "pdf_url": "/pdfs/super-mario.pdf",
+    "category": "popular",
+    "rating": 4.5
+  },
+  {
+    "title": "Wuthering Heights",
+    "author": "Emily Brontë",
+    "description": "Random Description",
+    "cover_image": "height",
+    "pdf_url": "/pdfs/book1.pdf",
+    "category": "popular",
+    "rating": 4.2
+  },
+  {
+    "title": "Learn Dutch Fast",
+    "author": "John Doe",
+    "description": "It's aimed at intermediate to advanced learners and emphasizes listening.",
+    "cover_image": "dutch",
+    "pdf_url": "https://theswissbay.ch/pdf/Books/Linguistics/Mega%20linguistics%20pack/Indo-European/Germanic/Dutch%2C%20Teach%20Yourself%20%28Quist%20%26%20Strik%29.pdf",
+    "category": "popular",
+    "rating": 4.2
+  },
+  {
+    "title": "Harry Potter and the Philosopher's Stone",
+    "author": "Jane Doe",
+    "description": "Harry discovers he's a wizard and starts his magical journey at Hogwarts.",
+    "cover_image": "harry",
+    "pdf_url": "https://kvongcmehsanalibrary.wordpress.com/wp-content/uploads/2021/07/harrypotter.pdf",
+    "category": "popular",
+    "rating": 4.2
+  },
+  {
+    "title": "Hunger Games",
+    "author": "Maria Semple",
+    "description": "Katniss fights to survive in a deadly game where only one can win.",
+    "cover_image": "hunger",
+    "pdf_url": "https://online.fliphtml5.com/elbz/nodb/#p=1",
+    "category": "popular",
+    "rating": 4.2
+  },
+  {
+    "title": "The Hobbit",
+    "author": "Alex Smith",
+    "description": "Bilbo joins dwarves on an adventure to steal treasure from a dragon.",
+    "cover_image": "hobbit",
+    "pdf_url": "https://primarysite-prod-sorted.s3.amazonaws.com/gobowen-primary-school/UploadedDocument/db3a2424ab834ade94f16606d5567712/the-hobbit-1.pdf",
+    "category": "popular",
+    "rating": 4.2
+  },
+  {
+    "title": "Blue is Darkness Weakened by Light",
+    "author": "Sarah McClarty",
+    "description": "The story of Nintendo's iconic character.",
+    "cover_image": "blue",
+    "pdf_url": "/pdfs/super-mario.pdf",
+    "category": "recent",
+    "rating": 3
+  },
+  {
+    "title": "A Million Miles in a Thousand Years",
+    "author": "Donald Miller",
+    "description": "The story of Nintendo's iconic character.",
+    "cover_image": "million",
+    "pdf_url": "/pdfs/super-mario.pdf",
+    "category": "recent",
+    "rating": 4
+  },
+  {
+    "title": "Boy Erased",
+    "author": "Garrard Conley",
+    "description": "The story of Nintendo's iconic character.",
+    "cover_image": "boy",
+    "pdf_url": "/pdfs/super-mario.pdf",
+    "category": "recent",
+    "rating": 2
+  },
+  {
+    "title": "The Crow's Vow",
+    "author": "Susan Briscoe",
+    "description": "The story of Nintendo's iconic character.",
+    "cover_image": "crow",
+    "pdf_url": "/pdfs/super-mario.pdf",
+    "category": "recent",
+    "rating": 4
+  },
+  {
+    "title": "Harry Potter",
+    "author": "J.K. Rowling",
+    "description": "The story of Nintendo's iconic character.",
+    "cover_image": "harrys",
+    "pdf_url": "/pdfs/super-mario.pdf",
+    "category": "recent",
+    "rating": 5
+  }
+]

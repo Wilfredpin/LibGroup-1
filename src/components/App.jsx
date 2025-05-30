@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import BasicExample from './Second Page/TargetPage';
 import NextPage from './Final Page/NextPage';
-import Profile from './Final Page/Profile';
+// import Profile from './Final Page/Profile';
 import BlankPage from './BlankPage';
 import ProtectedRoute from './ProtectedRoute';
 import { UserProvider } from './UserContext';
@@ -26,14 +26,14 @@ function App() {
               </ProtectedRoute>
             }
           />
-          <Route
+          {/* <Route
             path="/profile"
             element={
               <ProtectedRoute>
                 <Profile />
               </ProtectedRoute>
             }
-          />
+          /> */}
           <Route path="*" element={<div>404 Page Not Found</div>} />
         </Routes>
       </Router>

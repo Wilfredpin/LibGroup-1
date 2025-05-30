@@ -1,6 +1,6 @@
 import React from 'react';
 import './Sidebar.css';
-// import Profile from "./pexels-lap-dinh-quoc-728742807-18821587.jpg";
+import { logoutUser } from '../../../utils/authUtils';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -8,12 +8,10 @@ const Sidebar = ({ onViewChange, currentView, user }) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.clear();
-    sessionStorage.clear();
-    navigate('/');
+    logoutUser(navigate);
   };
 
-  const handleProfileClick = () => navigate('/profile');
+  // const handleProfileClick = () => navigate('/profile');
 
   return (
     <div className="sidebar">
@@ -41,8 +39,8 @@ const Sidebar = ({ onViewChange, currentView, user }) => {
         </div>
 
         <div
-          className={`nav-item ${currentView === 'popular' ? 'active' : ''}`}
-          onClick={() => onViewChange('popular')}
+          className={`nav-item ${currentView === 'collections' ? 'active' : ''}`}
+          onClick={() => onViewChange('collections')}
         >
           <img
             src="https://img.icons8.com/ios-filled/20/000000/book.png"
@@ -57,13 +55,41 @@ const Sidebar = ({ onViewChange, currentView, user }) => {
           />
           <span>Saved</span>
         </div>
-        <div className="nav-item" onClick={handleProfileClick}>
+        <div
+          className={`nav-item ${currentView === 'profile' ? 'active' : ''}`}
+          onClick={() => onViewChange('profile')}
+        >
           <img
             src="https://img.icons8.com/ios-filled/20/000000/user.png"
             alt="Profile"
           />
           <span>Profile</span>
         </div>
+
+        <div
+          className={`nav-item ${currentView === 'upload' ? 'active' : ''}`}
+          onClick={() => onViewChange('upload')}
+        >
+          <img
+            src="https://img.icons8.com/ios-filled/20/000000/upload.png"
+            alt="Upload"
+          />
+          <span>Book Upload</span>
+        </div>
+        
+        {/* <div
+          className={`nav-item ${
+            currentView === 'bulk_upload' ? 'active' : ''
+          }`}
+          onClick={() => onViewChange('bulk_upload')}
+        >
+          <img
+            src="https://img.icons8.com/ios-filled/20/000000/upload.png"
+            alt="Upload"
+          />
+          <span>Bulk Upload</span>
+        </div> */}
+
         <div
           className="nav-item logout"
           onClick={handleLogout}

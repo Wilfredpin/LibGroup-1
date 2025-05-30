@@ -1,0 +1,32 @@
+.profile-container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile {
+  display: inherit;
+  flex-direction: column;
+  /* align-self: center; */
+  width: 250px;
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 1rem;
+}
+
+.profile div {
+  display: inherit;
+  justify-content: space-evenly;
+}
+
+.profile input {
+  /* width: 50%; */
+  border: 0;
+}

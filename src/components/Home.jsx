@@ -1,19 +1,20 @@
-import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-import ColorSchemesExample from "./Navigation Bar";
-import ActiveExample from "./Hero Section/Button";
-import ShapeExample from "./Hero Section/Image";
-import BookCard from "./Recent/Recent";
-import MyComponent from "./Comment/Comment";
-import Footer from "./Footer/Footer";
+import ColorSchemesExample from './Navigation Bar';
+import ActiveExample from './Hero Section/Button';
+import ShapeExample from './Hero Section/Image';
+import BookCard from './Recent/Recent';
+import MyComponent from './Comment/Comment';
+import Footer from './Footer/Footer';
+import { getToken } from '../utils/authUtils';
 
 function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token) navigate("/dashboard");
+    const token = getToken();
+    if (token) navigate('/dashboard');
   }, [navigate]);
 
   return (
