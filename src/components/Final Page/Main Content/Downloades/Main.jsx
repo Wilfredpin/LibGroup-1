@@ -35,7 +35,7 @@ const Recommended = ({ user }) => {
   return (
     <div className="recommended">
       <div className="rec-header">
-        <h2>My Uploads</h2>
+        <h2>My Downloads</h2>
         <button className="see-all">See All →</button>
       </div>
       <div className="rec-cards">
